@@ -52,6 +52,7 @@ header {
   margin-bottom: 5px;
 }
 
+/* <!--MENU-DESKTOP --> */
 nav.desk-menu ul {
   display: flex;
   list-style: none;
@@ -74,9 +75,9 @@ nav.mobile-menu {
   border:2px solid yellow;
   position: absolute;
   left: 0px;
-  top: 36px;
+  top: 60px;
   width: 100%;
-  padding-top: 35px;
+  padding-top: 12px;
 }
 nav.mobile-menu li{
   background-color: white;
@@ -84,11 +85,19 @@ nav.mobile-menu li{
   margin-bottom: 1px;
   padding: 7px;
 }
+nav.mobile-menu li:hover{
+  background-color: rgb(230,230,230);
+}
 nav.mobile-menu a{
   text-decoration: none;
   color: black;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  /* background-color: yellow; */
 }
 
+/* <!--HEADER TEXT --> */
 .head-text {
   color: white;
   width: 700px;
@@ -392,7 +401,7 @@ footer .center p {
   }
 
   /* MENU escondido */
-  .head-container .menu {
+  .head-container img.menu {
     visibility: hidden;
     display: none;
   }
@@ -410,6 +419,7 @@ footer .center p {
   .head-container img.menu {
     visibility: visible;
     display: static;
+    cursor: pointer;
   }
 
   /* <!--aprensentar o menu mobile--> */
