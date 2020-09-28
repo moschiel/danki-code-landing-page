@@ -71,6 +71,22 @@ nav.desk-menu a {
 nav.mobile-menu {
   display: none;
   visibility: none;
+  border:2px solid yellow;
+  position: absolute;
+  left: 0px;
+  top: 36px;
+  width: 100%;
+  padding-top: 35px;
+}
+nav.mobile-menu li{
+  background-color: white;
+  text-align: center;
+  margin-bottom: 1px;
+  padding: 7px;
+}
+nav.mobile-menu a{
+  text-decoration: none;
+  color: black;
 }
 
 .head-text {
@@ -339,6 +355,7 @@ footer > .center {
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
+  width: 90%;
 }
 
 footer .center p {
@@ -366,6 +383,21 @@ footer .center p {
   }
 }
 
+/******* SCREEN >= 761px ********/
+@media screen and (min-width: 761px) {
+  /* UL visivel */
+  .head-container ul {
+    visibility: visible;
+    display: flex;
+  }
+
+  /* MENU escondido */
+  .head-container .menu {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 /******* SCREEN <= 760px ********/
 @media screen and (max-width: 760px) {
   /* desktop menu escondido */
@@ -375,20 +407,21 @@ footer .center p {
   }
 
   /* icon menu visivel */
-  .menu {
+  .head-container img.menu {
     visibility: visible;
     display: static;
   }
 
   /* <!--aprensentar o menu mobile--> */
-  .menu:hover + .mobile-menu {
+  img.menu:hover + nav.mobile-menu{
     display: block;
     visibility: visible;
-    background-color: yellow;
-    height: 200px;
-    width: 200px;
   }
-
+  nav.mobile-menu:hover{
+    display: block;
+    visibility: visible;
+  }
+  
   /***** SECTION DEV *****/
   section.dev .dev-text {
     width: 100%;
@@ -465,25 +498,5 @@ footer .center p {
     /******* FOOTER ********/
   footer > .center {
     padding: 40px 20px;
-  }
-}
-
-/******* SCREEN >= 761px ********/
-@media screen and (min-width: 761px) {
-  /* UL visivel */
-  .head-container ul {
-    visibility: visible;
-    display: flex;
-  }
-
-  /* MENU escondido */
-  .head-container .menu {
-    visibility: hidden;
-    display: none;
-  }
-
-  /******* FOOTER ********/
-  footer > .center {
-    width: 90%;
   }
 }
