@@ -9,16 +9,29 @@ html, body, input, textarea, button{
 	font-family:'Open Sans', sans-serif;
 }
 
-.clear{
-	clear: both;
+.center{
+	max-width: 1280px;
+	width: 100%;
+}
+
+.button{
+		width: 180px;
+		height: 40px;
+		border-radius: 20px;
+		color: white;
+		background-color: #ff703d;
+		border: none;
 }
 
 /************HEADER *******/
 header{
 	width: 100%;
-	height: 100%;
+	height: 90vh;
+	min-height: 800px;
 	background-size: cover;
+	/* background-size: contain; */
 	background-image: url("../images/capa.png");
+	background-position: center;
 }
 
 .head-container{
@@ -36,20 +49,27 @@ header{
 	margin-bottom: 5px;
 }
 
-.head-container ul{
+
+nav.desk-menu ul{
 	display: flex;
 	list-style: none;
 }
 
-.head-container li{
+nav.desk-menu li{
 	margin: auto 20px;
 }
 
-.head-container a{
+nav.desk-menu a{
 	text-transform: capitalize;
 	text-decoration: none;
 	color: white;
 }
+
+
+nav.mobile-menu{
+	display: none;
+	visibility: none;
+} 
 
 .head-text{
 	border: 2px solid green;
@@ -62,7 +82,6 @@ header{
 
 .head-text h2{
 	border: 2px solid orange;
-	width: 500px;
 	margin-bottom: 20px;
 	font-size: 40px;
 	font-weight: 300;
@@ -82,7 +101,6 @@ section.dev{
 	align-items: center;
 }
 
-
 section.dev .dev-text {
 	width: 50%;
 	border: 2px solid tomato;
@@ -90,7 +108,7 @@ section.dev .dev-text {
 
 section.dev .dev-container{
 	float: right;
-	margin-right: -40px;
+	margin-right: -50px;
 	/* border: 2px solid yellow; */
 	width: 400px;
 	color: white;
@@ -113,50 +131,256 @@ section.dev .dev-text ul{
 	margin: 5px 0 20px;
 }
 
-	section.dev .dev-text ul li{
+section.dev .dev-text ul li{
 	padding: 5px 0;
 	list-style-position: inside;
 }
 
-section.dev .dev-text input[type="button"]{
-	width: 200px;
-	height: 50px;
-	border-radius: 70px;
+/* section.dev .dev-text input[type="button"]{
+	width: 180px;
+	height: 40px;
+	border-radius: 20px;
 	color: white;
 	background-color: #ff703d;
 	border: none;
-}
+} */
 
 section.dev .cel-container{
 	border: 2px solid yellow;
 	width: 50%;
 }
-
-
-section.dev .cel-container img{
+/*
+section.dev .cel-container{
 	height: 450px;
+	margin-top: -40px;
+}*/
+
+section.dev .cel-image{
+	border: 2px solid white;
+	background-image: url("../images/device.png");
+	background-position: center;
+	background-size: 100% 100%;
+	height: 400px;
+	width: 70%;
 	margin-top: -40px;
 }
 
-/******** **************/
-/* @media screen and (max-width: px){
+/******** SECTION PESSOAS ********/
+section.pessoas{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
 
-} */
+.pessoas-container{
+	padding: 30px;
+	text-align: center;
+}
+
+.pessoas-container h2{
+	color: #472663;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.pessoas-container p{
+	margin: auto 100px;
+}
+
+/**** TIME / COLABORES *****/
+section.time{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid teal;
+}
+
+section.time .esquerda{
+	background-color: #835FA7;
+	border: 2px solid red;
+	width: 50%;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+section.time .time-text,
+.colaborador{
+	max-width: 500px;
+	width: auto;
+}
 
 
-/******* SCREEN <= 760px ********/
-@media screen and (max-width: 760px){
-	/* UL escondido */
-	.head-container ul{
-		visibility: hidden;
-		display: none;
-	}
-	/* MENU visivel */
-	.head-container .menu{
-		visibility: visible;
-		display: static;
-	}
-	
+section.time .time-text {
+	padding: 5%;
+	float:right;
+	border: 2px solid tomato;
+	color: white;
+}
+
+section.time .time-text h2{
+	font-weight: 300;
+	margin-bottom: 10px;
+font-style: italic;
+}
+
+section.time .time-text p{
+	font-size: 16px;
+	line-height: 2.5;
+}
+
+section.time .direita{
+	border: 2px solid red;
+	width: 50%;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+.colaborador{
+	border: 2px solid yellow;
+	background-color: white;
+	padding-left: 20px;
+}
+
+.perfil{
+	display: flex;
+	color: #232323;
+}
+
+.perfil h2{
+	font-weight: 400;
+	font-size: 21px;
+}
+
+.perfil .cargo{
+	font-size: 13px;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.perfil .foto{
+	width: 46px;
+	height: 46px;
+	border-radius: 23px;
+	background-color: green;
+	background-image: url("../images/rob.jpeg");
+	background-size: cover;
+	background-position: center;
+	margin-left: 10px;
+}
+
+.colaborador .descricao{
+	margin-top: 15px;
+}
+
+.bullets{
+	display: flex;
+	margin-top: 10px;
+}
+
+.bolinha{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: red;
+	margin-right: 10px;
+	background-color: #c8c8c8;
+	cursor: pointer;
+}
+
+.bolinha.active{
+	background-color: #aaaaaa;
+}
+
+
+/******* CONTATO ********/
+section.contato{
+	width: 100%;
+	background-color: #472563;
+	display:flex;
+	justify-content:center;
+}
+
+section.contato .center{
+	display:flex;
+	justify-content:center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.form-container{
+	border: 2px solid yellow;
+	width: 50%;
+}
+
+.form-container form{
+	border: 2px solid orange;
+	width: 75%;
+	color: white;
+}
+
+form h2{
+	font-size: 23px;
+	font-weight: 300;
+}
+form p{
+	font-size: 15px;
+	font-weight: 300;
+	margin-bottom: 20px;
+	width: 80%;
+}
+
+form input:not([type="submit"]), 
+form textarea{
+	width: 100%;
+	margin: 3px auto;
+	padding: 15px 10px;
+}
+
+.map{
+	border: 2px solid white;
+	width: 50%;
+}
+
+.map h2{
+	font-weight: 300;
+	margin-bottom: 10px;
+	color: white;
+}
+
+
+.google-map{
+	border: 7px solid #c8c8c8;
+	width: 80%; 
+	height: 500px;
+}
+
+
+
+
+/******* FOOTTER  ********/
+
+footer {
+	background-color: #192123;
+}
+
+footer > .center{
+	max-width: 1280px;
+	display: flex;
+	justify-content:space-between;
+	padding: 40px;
+}
+
+footer .center p{
+	color:white;
+}
+
+
+
+
+/******* SCREEN <= 800px ********/
+@media screen and (max-width: 800px){
 	.head-text{
 		width: 100%;
 		float: unset;
@@ -166,15 +390,104 @@ section.dev .cel-container img{
 		align-items: center; /* vertical */
 		justify-content: center; 
 	}
+
 	.head-text h2{
 		text-align: center;
 		font-size: 30px;
 	}
+
 	.head-text p{
 		text-align: center;
 	}
+} 
 
 
+/******* SCREEN <= 760px ********/
+@media screen and (max-width: 760px){
+	/* desktop menu escondido */
+	nav.desk-menu{
+		visibility: hidden;
+		display: none;
+	}
+	/* icon menu visivel */
+	.menu{
+		visibility: visible;
+		display: static;
+	}
+
+
+	.menu:hover + .mobile-menu{
+		display: block;
+		visibility: visible;	
+		background-color: yellow;
+		height: 200px;
+		width: 200px;
+	}
+	 
+
+	section.dev .dev-text {
+		width: 100%;
+		border: 2px solid tomato;
+		display:flex;
+		justify-content: center;
+	}
+
+	section.dev .cel-container{
+		visibility: hidden;
+		display: none;
+	}
+
+	section.dev .dev-text .dev-container{
+		margin: 40px 0;
+		text-align: center;
+	}
+
+	section.dev .dev-text .dev-container ul{
+		border: 1px solid blue;
+		text-align: left;
+		padding-left: 35%;
+	}
+
+	.pessoas-container p{
+		margin: auto 15px;
+		text-align: justify;
+	}
+
+	section.time{
+		flex-wrap: wrap;
+	}
+
+	.colaborador,
+	section.time .time-text,
+	section.time .esquerda,
+	section.time .direita{
+		width: unset;
+		max-width: unset;
+		padding: unset;
+	}
+	
+	section.time .esquerda,
+	.colaborador, .time-text{
+		padding: 40px;
+	}
+
+	section.contato .center{
+		flex-wrap: wrap;
+		display:flex;
+		justify-content:center;
+	}
+
+	.form-container {
+		width: 70%;
+	}
+
+	.form-container form{
+		width: unset;
+	}
+
+	section.contato {
+		width: 100%;
+	}
 }
 
 /******* SCREEN >= 761px ********/
