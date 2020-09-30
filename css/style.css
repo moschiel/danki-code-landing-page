@@ -70,30 +70,36 @@ nav.desk-menu a {
 
 /* <!--MENU-MOBILE --> */
 nav.mobile-menu {
-  display: none;
-  visibility: none;
-  position: absolute;
   left: 0px;
   top: 60px;
   width: 100%;
   padding-top: 12px;
+
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
 }
-nav.mobile-menu li{
+
+nav.mobile-menu li {
   background-color: white;
   text-align: center;
   margin-bottom: 1px;
-  padding: 7px;
+  padding: 10px 0;
+  transition: 1s;
 }
-nav.mobile-menu li:hover{
-  background-color: rgb(230,230,230);
+nav.mobile-menu li:hover {
+  background-color: rgb(230, 230, 230);
 }
-nav.mobile-menu a{
+
+nav.mobile-menu a {
   text-decoration: none;
   color: black;
   width: 100%;
   cursor: pointer;
   display: block;
-  /* background-color: yellow; */
+  text-transform: capitalize;
 }
 
 /* <!--HEADER TEXT --> */
@@ -234,7 +240,6 @@ section.time .direita {
   width: 50%;
   height: 100%;
 }
-
 
 /* colaborador */
 .colaborador {
@@ -422,15 +427,16 @@ footer .center p {
   }
 
   /* <!--aprensentar o menu mobile--> */
-  img.menu:hover + nav.mobile-menu{
-    display: block;
+  img.menu:hover + nav.mobile-menu {
+    opacity: 1;
     visibility: visible;
   }
-  nav.mobile-menu:hover{
-    display: block;
+
+  nav.mobile-menu:hover {
+    opacity: 1;
     visibility: visible;
   }
-  
+
   /***** SECTION DEV *****/
   section.dev .dev-text {
     width: 100%;
@@ -504,7 +510,7 @@ footer .center p {
     margin: 0 0 100px;
   }
 
-    /******* FOOTER ********/
+  /******* FOOTER ********/
   footer > .center {
     padding: 40px 20px;
   }
