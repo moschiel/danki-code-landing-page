@@ -72,7 +72,6 @@ nav.desk-menu a {
 nav.mobile-menu {
   display: none;
   visibility: none;
-  border:2px solid yellow;
   position: absolute;
   left: 0px;
   top: 60px;
