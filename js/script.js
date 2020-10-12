@@ -2,7 +2,7 @@ let menuIcon = $('img.menu');
 let menuMobile = $('.mobile-menu');
 
 //aplica evento de click para inverter visibilidade do menu mobile
-$(menuIcon).click(function(){
+menuIcon.click(function(){
   menuMobile.slideToggle();
 });
 
