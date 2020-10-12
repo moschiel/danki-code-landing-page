@@ -207,16 +207,17 @@ section.pessoas {
 section.time {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  /* border: 2px solid black; */
 }
 
 section.time .esquerda {
   background-color: #835fa7;
   width: 50%;
+  min-height: 100%;
 }
 
-section.time .time-text,
-.colaborador {
+section.time .time-text{
   max-width: 500px;
   width: auto;
 }
@@ -241,12 +242,25 @@ section.time .time-text p {
 section.time .direita {
   width: 50%;
   height: 100%;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* border: 2px solid orange; */
+}
+
+.scrollColaboradores {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
 }
 
 /* colaborador */
 .colaborador {
+  min-width: 100%;
   background-color: white;
-  padding-left: 20px;
+  /* padding-left: 30px; */
+  padding-right: 20%;
+  /* border: 1px solid red; */
 }
 
 .perfil {
@@ -284,6 +298,7 @@ section.time .direita {
 .bullets {
   display: flex;
   margin-top: 10px;
+  /* margin-left: 20px; */
 }
 
 .bolinha {
@@ -471,11 +486,14 @@ footer .center p {
 
   .colaborador,
   section.time .time-text,
-  section.time .esquerda,
-  section.time .direita {
+  section.time .esquerda {
     width: unset;
     max-width: unset;
     padding: unset;
+  }
+
+  section.time .direita {
+    width: 100%;
   }
 
   section.time .esquerda,
